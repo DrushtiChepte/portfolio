@@ -2,51 +2,10 @@
 import { gridItems, socialMedia } from "@/data";
 import { TextRevealCard, TextRevealCardTitle } from "./ui/TextReveal";
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 const About = () => {
   return (
-    // <section className="py-20 px-5 md:px-10" id="about">
-    //   <h1 className="text-center text-3xl md:text-5xl font-bold mb-0 md:mb-5">
-    //     About Me
-    //   </h1>
-    //   <div className="flex flex-col gap-20 md:flex-row md:gap-30 items-center justify-center">
-    //     <div className="text-center md:text-left md:w-2/3 text-md">
-    // <div suppressHydrationWarning>
-    //   <TextRevealCard
-    //     text="Full Stack Developer 👩🏻‍💻"
-    //     revealText="Mechanical Engineer Student 👩🏻‍🔧"
-    //   ></TextRevealCard>
-    // </div>
-    //       <p>
-    //         Hello again👋,I'm a Mechanical Engineering student who discovered a
-    //         deep passion for web development. While I still enjoy the
-    //         problem-solving side of mechanical, I’ve grown more excited about
-    //         creating through code.
-    //       </p>{" "}
-    //       <br />
-    //       <p>
-    //         Though I don’t come from a CS background, I’ve been learning through
-    //         practice—building projects, exploring online resources, and figuring
-    //         things out one step at a time. I really enjoy the process of turning
-    //         ideas into working websites, and seeing them come to life on the
-    //         screen.
-    //       </p>{" "}
-    //       <br />
-    //       <p>
-    //         Right now, I’m focused on growing as a full-stack developer and
-    //         continuing to explore how I can combine my background in engineering
-    //         with my passion for building websites.
-    //       </p>
-    //     </div>
-    //     <div className="relative top-0 md:top-10 md:w-1/3 flex justify-center">
-    //       <img
-    //         src="/MyProfile.png"
-    //         alt="My Profile"
-    //         className="object-cover w-40 h-40 md:h-[300px] md:w-[250px] rounded-full md:rounded-2xl"
-    //       />
-    //     </div>
-    //   </div>
-    // </section>
     <section id="about" className="py-20">
       <h1 className="text-center text-3xl md:text-5xl font-bold mb-10">
         About <span className="text-p3">Me</span>{" "}
@@ -59,7 +18,7 @@ const About = () => {
           >
             {item.id === 1 && (
               <div className="relative w-full h-full rounded-xl flex items-end overflow-hidden">
-                <img
+                <Image
                   src={item.img ?? ""}
                   alt="background"
                   className="absolute inset-0 w-full h-full object-cover"
@@ -88,7 +47,7 @@ const About = () => {
 
             {item.id === 2 && (
               <div className="p-5 md:p-10">
-                <img
+                <Image
                   src={item.img ?? ""}
                   alt="profile"
                   className="z-10 relative rounded-full md:rounded-lg h-40 w-40 md:h-full md:w-full"
@@ -163,7 +122,7 @@ const About = () => {
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 text-sm font-medium text-white backdrop-blur-3xl">
-                    <img
+                    <Image
                       src="./copy.svg"
                       height={20}
                       width={20}
@@ -199,7 +158,7 @@ const About = () => {
                     key={info.id}
                     className="w-10 h-10   cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-white/[.2]"
                   >
-                    <img
+                    <Image
                       src={info.img}
                       alt="icons"
                       width={20}

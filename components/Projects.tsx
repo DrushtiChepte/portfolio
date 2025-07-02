@@ -1,5 +1,6 @@
 import { projects } from "@/data";
 import { AnimatedTooltip } from "./ui/tooltip";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -20,9 +21,9 @@ const Projects = () => {
                 className="relative w-full h-full overflow-hidden rounded-2xl lg:rounded-3xl "
                 style={{ backgroundColor: "#13162D" }}
               >
-                <img src="/bg.png" alt="bgimg" />
+                <Image src="/bg.png" alt="bgimg" />
               </div>
-              <img
+              <Image
                 src={item.img}
                 alt="cover"
                 className="absolute z-10 h-full scale-110 transition-transform duration-300 hover:scale-105"

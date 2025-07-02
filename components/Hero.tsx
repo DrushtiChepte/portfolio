@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-5 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                   <span>Download Resume </span>
-                  <img
+                  <Image
                     src="./download.svg"
                     height={25}
                     width={25}
@@ -54,7 +55,7 @@ const Hero = () => {
         </motion.div>
       </div>
       <div className="">
-        <img
+        <Image
           src="/HeroBg.svg"
           alt="grid background"
           className="absolute left-30 top-30 md:left-150 md:top-5"

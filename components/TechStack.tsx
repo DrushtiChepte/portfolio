@@ -2,6 +2,7 @@
 
 import { technologies } from "@/data";
 import { Button } from "./ui/MovingBorder";
+import Image from "next/image";
 
 const TechStack = () => {
   return (
@@ -12,7 +13,7 @@ const TechStack = () => {
       <div className="flex gap-5 flex-wrap justify-center items-center md:justify-start lg:justify-center py-10">
         {technologies.map((tech, index) => (
           <Button key={index} borderRadius="1rem" className="bg-black-100">
-            <img src={tech.logo} height={25} width={25} alt={tech.name} />
+            <Image src={tech.logo} height={25} width={25} alt={tech.name} />
             <p className="pl-2 text-sm">{tech.name}</p>
           </Button>
         ))}
