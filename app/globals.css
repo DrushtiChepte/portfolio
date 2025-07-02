@@ -1,26 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-actor: "Actor", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --color-primary: #000;
+  --color-p1: #502f4c;
+  --color-p2: #70587c;
+  --color-p3: #c8b8db;
+  --color-secondary: #f9f4f5;
+  --color-black-100: #00040f;
+  --color-black-200: "rgba(17, 25, 40, 0.75)";
+  --color-black-300: "rgba(255, 255, 255, 0.125)";
 }
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background-size: 200% 100%;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-actor);
+  color: var(--color-secondary);
+  background-color: var(--color-black-100);
+}
+html {
+  scroll-behavior: smooth;
 }
