@@ -1,11 +1,5 @@
 "use client";
-import React, {
-  ElementType,
-  HTMLAttributes,
-  ReactNode,
-  RefObject,
-  useRef,
-} from "react";
+import React, { ElementType, HTMLAttributes, ReactNode, useRef } from "react";
 import {
   motion,
   useAnimationFrame,

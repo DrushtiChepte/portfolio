@@ -10,8 +10,8 @@ const Contact = () => {
           Let&apos;s Build Something <span className="text-p3">Awesome</span>
         </h2>
         <p className="text-gray-600 dark:text-zinc-400 max-w-lg mx-auto mb-6">
-          I'm always open to collaborating on exciting projects or just chatting
-          about tech. Don&apos;t hesitate to reach out!
+          I&apos;m always open to collaborating on exciting projects or just
+          chatting about tech. Don&apos;t hesitate to reach out!
         </p>
         <a
           href="mailto:drushtichepte@email.com"
@@ -21,7 +21,7 @@ const Contact = () => {
           <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-5 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-              <span className="pr-2">Let's get in touch</span>
+              <span className="pr-2">Let&apos; get in touch</span>
               <FaLocationArrow />
             </span>
           </button>
