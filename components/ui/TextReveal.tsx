@@ -16,7 +16,7 @@ export const TextRevealCard = ({
   className?: string;
 }) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null); // ✅ FIXED
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -30,9 +30,10 @@ export const TextRevealCard = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
+  function mouseMoveHandler(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
     event.preventDefault();
-
     const { clientX } = event;
     if (cardRef.current) {
       const relativeX = clientX - left;
@@ -44,12 +45,14 @@ export const TextRevealCard = ({
     setIsMouseOver(false);
     setWidthPercentage(0);
   }
+
   function mouseEnterHandler() {
     setIsMouseOver(true);
   }
+
   function touchMoveHandler(event: React.TouchEvent<HTMLDivElement>) {
     event.preventDefault();
-    const clientX = event.touches[0]!.clientX;
+    const clientX = event.touches[0].clientX;
     if (cardRef.current) {
       const relativeX = clientX - left;
       setWidthPercentage((relativeX / localWidth) * 100);
@@ -57,6 +60,7 @@ export const TextRevealCard = ({
   }
 
   const rotateDeg = (widthPercentage - 50) * 0.1;
+
   return (
     <div
       onMouseEnter={mouseEnterHandler}
@@ -73,11 +77,9 @@ export const TextRevealCard = ({
     >
       {children}
 
-      <div className="h-20 md:h-25 relative flex items-center overflow-hidden">
+      <div className="h-20 md:h-25 p-4 relative flex items-center overflow-hidden">
         <motion.div
-          style={{
-            width: "100%",
-          }}
+          style={{ width: "100%" }}
           animate={
             isMouseOver
               ? {
@@ -89,17 +91,16 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-black-100 z-20  will-change-transform"
+          className="absolute bg-black-100 z-20 will-change-transform"
         >
           <p
-            style={{
-              textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-            }}
+            style={{ textShadow: "4px 4px 15px rgba(0,0,0,0.5)" }}
             className="text-xl md:text-4xl py-10 text-p3 text-nowrap font-bold bg-clip-text bg-gradient-to-b from-white to-neutral-300"
           >
             {revealText}
           </p>
         </motion.div>
+
         <motion.div
           animate={{
             left: `${widthPercentage}%`,
@@ -110,7 +111,7 @@ export const TextRevealCard = ({
           className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+        <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
           <p className="text-3xl md:text-5xl text-p3 py-10 font-bold bg-clip-text bg-black-100">
             {text}
           </p>
@@ -139,6 +140,7 @@ const Stars = () => {
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
+
   return (
     <div className="absolute inset-0">
       {[...Array(80)].map((_, i) => (

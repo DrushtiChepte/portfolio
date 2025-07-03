@@ -7,11 +7,11 @@ const Contact = () => {
     <footer id="contact" className="pt-5 md:pt-10 pb-5 px-20">
       <div className="relative z-10 flex flex-col justify-center items-center py-20 text-center">
         <h2 className="text-5xl font-bold mb-4">
-          Let’s Build Something <span className="text-p3">Awesome</span>
+          Let&apos;s Build Something <span className="text-p3">Awesome</span>
         </h2>
         <p className="text-gray-600 dark:text-zinc-400 max-w-lg mx-auto mb-6">
           I'm always open to collaborating on exciting projects or just chatting
-          about tech. Don’t hesitate to reach out!
+          about tech. Don&apos;t hesitate to reach out!
         </p>
         <a
           href="mailto:drushtichepte@email.com"
