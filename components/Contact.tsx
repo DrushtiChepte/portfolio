@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 
@@ -27,8 +28,8 @@ const Contact = () => {
         </a>
       </div>
       <div>
-        <img
-          src="./HeroBg.svg"
+        <Image
+          src="/HeroBg.svg"
           alt="grid background"
           height={700}
           width={700}

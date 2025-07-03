@@ -54,7 +54,9 @@ const Hero = () => {
       </div>
       <div>
         <img
-          src="./HeroBg.svg"
+          height={980}
+          width={980}
+          src="/HeroBg.svg"
           alt="grid background"
           className="absolute left-30 top-30 md:left-150 md:top-5"
         />

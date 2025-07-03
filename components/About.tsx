@@ -54,9 +54,7 @@ const About = () => {
                   <img
                     src={item.img}
                     alt="profile"
-                    height={40}
-                    width={40}
-                    className="z-10 relative rounded-lg h-40 w-40 md:h-full md:w-full"
+                    className="z-10 relative rounded-lg h-40 w-39 md:h-full md:w-full"
                   />
                 )}
               </div>
