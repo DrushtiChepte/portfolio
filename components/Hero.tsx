@@ -13,7 +13,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center justify-self-start"
         >
-          <h1 className="text-white mb-4 text-5xl md:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-3xl md:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="">Hello, I&apos;m </span>
             <br></br>
             <TypeAnimation
@@ -31,7 +31,7 @@ const Hero = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-secondary text-base md:text-xl mb-6 lg:text-2xl">
+          <p className="text-gray-400 text-base md:text-xl mb-6 lg:text-2xl">
             From Mechanical roots to Modern Web routes.
           </p>
           <div className="flex justify-center items-center space-x-6 pt-10">
@@ -52,13 +52,11 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <div>
+      <div className="w-full">
         <img
-          height={980}
-          width={980}
           src="/GridBG.svg"
           alt="grid background"
-          className="absolute left-30 top-30 md:left-150 md:top-5"
+          className="absolute left-20 top-50 md:left-160 md:top-5 w-[700px] md:w-[850px] lg:w-[900px]"
         />
       </div>
     </section>

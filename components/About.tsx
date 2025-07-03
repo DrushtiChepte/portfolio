@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-5 md:py-20">
       <h1 className="text-center text-3xl md:text-5xl font-bold mb-10 md:mb-20">
         About <span className="text-p3">Me</span>{" "}
       </h1>
@@ -54,7 +54,7 @@ const About = () => {
                   <img
                     src={item.img}
                     alt="profile"
-                    className="z-10 relative rounded-lg h-40 w-39 md:h-full md:w-full"
+                    className="z-10 relative rounded-lg h-45 w-39 md:h-full md:w-full"
                   />
                 )}
               </div>

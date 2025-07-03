@@ -40,7 +40,7 @@ const Contact = () => {
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025
         </p>
-        <p>Made with ❤️ by Drushti Chepte</p>
+        <p className="text-nowrap">Made with ❤️ by Drushti Chepte</p>
       </div>
     </footer>
   );

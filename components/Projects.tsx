@@ -1,10 +1,11 @@
 import { projects } from "@/data";
 import { AnimatedTooltip } from "./ui/tooltip";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 z-10">
-      <h1 className="text-center text-3xl md:text-5xl font-bold mb-10 md:mb-20">
+    <section id="projects" className="py-30 md:py-20 z-10">
+      <h1 className="text-center text-3xl md:text-5xl font-bold mb-5 md:mb-20">
         A small selection of <span className="text-p3">recent projects</span>
       </h1>
 
@@ -43,23 +44,33 @@ const Projects = () => {
                 <AnimatedTooltip items={item.techStack} />
               </div>
 
-              <div className="lg:text-xl md:text-xs text-sm text-p3">
+              <div className="lg:text-xl md:text-xs text-sm flex flex-col md:flex-row items-end md:gap-2 gap-1 text-p3">
                 {item.id === 2 ? (
                   <span>{""}</span>
                 ) : (
-                  <>
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Check Live Site
-                    </a>
-                  </>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center gap-1"
+                  >
+                    Check Live Site{" "}
+                    <span className="block md:hidden">
+                      <FaLocationArrow />
+                    </span>
+                  </a>
                 )}
-                {" | "}
-                <a href={item.Glink} target="_blank" rel="noopener noreferrer">
-                  Source Code
+                <span className="hidden md:block"> | </span>
+                <a
+                  href={item.Glink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center gap-1"
+                >
+                  Source Code{" "}
+                  <span className="block md:hidden">
+                    <FaLocationArrow />
+                  </span>
                 </a>
               </div>
             </div>
