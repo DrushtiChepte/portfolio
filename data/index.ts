@@ -178,7 +178,7 @@ export const gridItems = [
     id: 2,
     className:
       "col-span-2 md:col-span-1 row-span-4 bg-black rounded-xl bg-black-100 overflow-hidden z-10",
-    img: "/myProfile.png",
+    img: "/MyProfile.png",
   },
   {
     id: 3,
