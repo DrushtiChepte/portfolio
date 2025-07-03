@@ -52,9 +52,9 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <div className="">
+      <div>
         <img
-          src="/HeroBg.svg"
+          src="./HeroBg.svg"
           alt="grid background"
           className="absolute left-30 top-30 md:left-150 md:top-5"
         />
