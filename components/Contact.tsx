@@ -29,7 +29,7 @@ const Contact = () => {
       </div>
       <div>
         <Image
-          src="/HeroBg.svg"
+          src="/GridBG.svg"
           alt="grid background"
           height={700}
           width={700}

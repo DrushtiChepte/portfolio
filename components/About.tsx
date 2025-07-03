@@ -7,7 +7,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <section id="about" className="py-20">
-      <h1 className="text-center text-3xl md:text-5xl font-bold mb-10">
+      <h1 className="text-center text-3xl md:text-5xl font-bold mb-10 md:mb-20">
         About <span className="text-p3">Me</span>{" "}
       </h1>
       <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-6 gap-6 z-10">

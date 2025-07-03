@@ -4,7 +4,7 @@ import { AnimatedTooltip } from "./ui/tooltip";
 const Projects = () => {
   return (
     <section id="projects" className="py-20 z-10">
-      <h1 className="text-center text-3xl md:text-5xl font-bold mb-20">
+      <h1 className="text-center text-3xl md:text-5xl font-bold mb-10 md:mb-20">
         A small selection of <span className="text-p3">recent projects</span>
       </h1>
 
