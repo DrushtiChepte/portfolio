@@ -74,7 +74,7 @@ type MovingBorderProps = {
   duration?: number;
   rx?: string;
   ry?: string;
-} & React.SVGProps<SVGSVGElement>; // to support SVG props like className, etc.
+} & React.SVGProps<SVGSVGElement>;
 
 export const MovingBorder = ({
   children,
