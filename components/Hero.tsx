@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -56,6 +55,8 @@ const Hero = () => {
       </div>
       <div className="">
         <Image
+          height={50}
+          width={50}
           src="/HeroBg.svg"
           alt="grid background"
           className="absolute left-30 top-30 md:left-150 md:top-5"

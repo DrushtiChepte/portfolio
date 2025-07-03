@@ -1,6 +1,5 @@
 import { projects } from "@/data";
 import { AnimatedTooltip } from "./ui/tooltip";
-import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -15,15 +14,14 @@ const Projects = () => {
             key={item.id}
             className="lg:min-h-[32.5rem] h-auto md:w-[38rem] sm:w-96 w-[80vw] flex flex-col justify-between border border-white/[.1] rounded-3xl p-6 bg-black-100 hover:bg-black-100/[.3] shadow-2xl transition-all duration-300"
           >
-            {/* Image container */}
             <div className="relative flex items-center justify-center overflow-hidden mb-10 md:h-[35vh] h-[25vh]">
               <div
                 className="relative w-full h-full overflow-hidden rounded-2xl lg:rounded-3xl "
                 style={{ backgroundColor: "#13162D" }}
               >
-                <Image src="/bg.png" alt="bgimg" />
+                <img src="/bg.png" alt="bgimg" />
               </div>
-              <Image
+              <img
                 src={item.img}
                 alt="cover"
                 className="absolute z-10 h-full scale-110 transition-transform duration-300 hover:scale-105"

@@ -18,28 +18,31 @@ const About = () => {
           >
             {item.id === 1 && (
               <div className="relative w-full h-full rounded-xl flex items-end overflow-hidden">
-                <Image
-                  src={item.img ?? ""}
-                  alt="background"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                {item.img && (
+                  <img
+                    src={item.img}
+                    alt="background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
 
                 <div className="absolute inset-0 bg-black/70" />
 
                 {/* Content */}
                 <div className="relative p-6 z-10 text-sm flex flex-col items-end gap-4">
                   <p>
-                    Hello again 👋, I'm a Mechanical Engineering student who
-                    discovered a deep passion for web development. While I still
-                    enjoy the problem-solving side of mechanical, I’ve grown
-                    more excited about creating through code.
+                    Hello again 👋, I&apos;m a Mechanical Engineering student
+                    who discovered a deep passion for web development. While I
+                    still enjoy the problem-solving side of mechanical,
+                    I&apos;ve grown more excited about creating through code.
                   </p>
                   <p>
-                    Though I don’t come from a CS background, I’ve been learning
-                    through practice—building projects, exploring online
-                    resources, and figuring things out one step at a time. I
-                    really enjoy the process of turning ideas into working
-                    websites, and seeing them come to life on the screen.
+                    Though I don&apos;t come from a CS background, I&apos;ve
+                    been learning through practice—building projects, exploring
+                    online resources, and figuring things out one step at a
+                    time. I really enjoy the process of turning ideas into
+                    working websites, and seeing them come to life on the
+                    screen.
                   </p>
                 </div>
               </div>
@@ -47,11 +50,15 @@ const About = () => {
 
             {item.id === 2 && (
               <div className="p-5 md:p-10">
-                <Image
-                  src={item.img ?? ""}
-                  alt="profile"
-                  className="z-10 relative rounded-full md:rounded-lg h-40 w-40 md:h-full md:w-full"
-                />
+                {item.img && (
+                  <img
+                    src={item.img}
+                    alt="profile"
+                    height={40}
+                    width={40}
+                    className="z-10 relative rounded-lg h-40 w-40 md:h-full md:w-full"
+                  />
+                )}
               </div>
             )}
 
@@ -123,7 +130,7 @@ const About = () => {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 text-sm font-medium text-white backdrop-blur-3xl">
                     <Image
-                      src="./copy.svg"
+                      src="/copy.svg"
                       height={20}
                       width={20}
                       alt="copy"
@@ -158,7 +165,7 @@ const About = () => {
                     key={info.id}
                     className="w-10 h-10   cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-white/[.2]"
                   >
-                    <Image
+                    <img
                       src={info.img}
                       alt="icons"
                       width={20}

@@ -172,35 +172,35 @@ export const gridItems = [
   {
     id: 1,
     className: "col-span-2 row-span-4 rounded-xl text-3xl relative",
-    img: "./b1.svg",
+    img: "/b1.svg",
   },
   {
     id: 2,
     className:
       "col-span-2 md:col-span-1 row-span-4 bg-black rounded-xl bg-black-100 overflow-hidden z-10",
-    img: "./myProfile.png",
+    img: "/myProfile.png",
   },
   {
     id: 3,
     className:
       "col-span-2 md:col-span-1 row-span-1 md:row-span-5 p-4 rounded-xl text-sm font-medium",
-    img: null,
+    img: "",
   },
   {
     id: 4,
     className:
       "col-span-2 md:col-span-1 row-span-2  p-4 rounded-xl text-sm leading-relaxed",
-    img: null,
+    img: "",
   },
   {
     id: 5,
     className: "col-span-2 row-span-2 rounded-xl flex flex-col justify-between",
-    img: null,
+    img: "",
   },
   {
     id: 6,
     className:
       "col-span-2 md:col-span-1 row-span-1 rounded-xl flex justify-center gap-6 text-sm font-medium",
-    img: null,
+    img: "",
   },
 ];
