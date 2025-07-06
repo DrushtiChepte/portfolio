@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Drushti Chepte | Portfolio",
+  title: "Drushti Chepte — Web developer Portfolio",
   description:
-    "Official portfolio of Drushti Chepte — passionate web developer and engineering student.",
+    "Passionate web developer with expertise in React and Next.js.Explore my projects and skills.",
   keywords: [
     "Drushti Chepte",
     "web developer",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://drushtichepte.me"),
   openGraph: {
     title: "Drushti Chepte | Portfolio",
-    description: "Web developer — check out my projects and skills!",
+    description: "Website developer — check out my projects and skills!",
     url: "https://drushtichepte.me",
     siteName: "Drushti Chepte Portfolio",
     locale: "en_IN",

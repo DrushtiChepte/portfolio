@@ -18,6 +18,10 @@ const SEO = ({ title, description, keywords, url }) => {
       <link rel="canonical" href={url || defaultUrl} />
       <meta property="og:title" content={title || defaultTitle} />
       <meta
+        property="og:image"
+        content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+      />
+      <meta
         property="og:description"
         content={description || defaultDescription}
       />
